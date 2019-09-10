@@ -1,0 +1,11 @@
+<div class="tarjeta" [style.background-color]="tarjeta.color">
+  <h2>{{tarjeta.titulo}}</h2>
+  <div class="contenido">
+    <mat-checkbox
+      (change)="SetCompletada($event,tarjeta)"
+      [checked]="asig.completada"
+      [ngClass]="{'completada': asig.completada}"
+      *ngFor="let asig of tarjeta.asignaciones">{{asig.texto}}
+    </mat-checkbox>
+  </div>
+</div>
